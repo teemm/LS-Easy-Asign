@@ -24,7 +24,6 @@ body{
 }
 .container .first-ln{
  	width: calc(100%/2 - 3.5%);
- 	/*width: 48%;*/
 }
 .container .first-ln:nth-child(1){
 	margin: 0 2% 2% 0;
@@ -34,9 +33,16 @@ body{
 }
 .container .sec-ln{
 	width: calc(100%/3 - 3%);
-	/*width: 32%;*/
-	margin: 0% 2% 2% 0;
+	margin: 0 2% 2% 0;
 }
 .container .sec-ln:last-child{
 	margin: 0 2% 0 0;
+}
+.container .main{
+	background: url('../svg/img.svg') no-repeat center center;
+  	width: 25%;
+  	height: 25%;
+  	position: relative;
+  	top: 37.5%;
+  	margin: 0 auto;
 }
