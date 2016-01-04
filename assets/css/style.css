@@ -33,30 +33,41 @@ body{
 	-o-transition: all 400ms ease-in-out;
 	transition: all 400ms ease-in-out;
 }
-.right{
+.blocks{
 	/*top: 2% !important;*/
-    left: 74% !important;
     width: 24% !important;
     height: 22% !important;
     background: red !important;
 }
-.left{
+.leftblocks{
+	left: 74% !important;
+}
+.rightblocks{
+	left: 2% !important;
+}
+.active{
 	top: 2%!important;
-	left: 2%!important;
 	width: 70% !important;
 	height: 96% !important;
-	background: green !important;
+	background: green !important;	
 }
-.right:nth-child(2){
+.rightactive{
+	left: 28%!important;
+}
+.leftactive{
+	left: 2%!important;
+}
+
+.blocks.allin:nth-child(2){
 	top: 2%!important 
 }
-.right:nth-child(3){
+.blocks.allin:nth-child(3){
 	top: 26%!important
 }
-.right:nth-child(4){
+.blocks.allin:nth-child(4){
 	top: 50%!important
 }
-.right:nth-child(5){
+.blocks.allin:nth-child(5){
 	top: 74%!important
 }
 @media screen and (min-width: 801px){
