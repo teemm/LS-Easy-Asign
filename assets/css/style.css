@@ -10,16 +10,15 @@ body{
 .container{
 	width: 100%;
     height: 100%;
-    /*padding: 2%;*/
     position: relative;
 }
 .container > div .content{
- 	background: #0B63CF;
+ 	background: rgb(11, 99, 207);
  	height: 100%;
  	overflow: hidden;
 }
 
-.container .main{
+.container > div:not(.block) .main{
 	background: url('../svg/img.svg') no-repeat center center;
   	width: 25%;
   	height: 25%;
@@ -27,17 +26,25 @@ body{
   	top: 37.5%;
   	margin: 0 auto;
 }
+.container .active .closse {
+	width: 30px;
+	height: 30px;
+	background: url('../svg/closse.svg') center;
+	position: absolute;
+	right: 2%;
+	top: 2%;
+	cursor: pointer;
+
+}
 .transition{
 	-webkit-transition: all 400ms ease-in-out;
 	-moz-transition: all 400ms ease-in-out;
 	-o-transition: all 400ms ease-in-out;
 	transition: all 400ms ease-in-out;
 }
-.blocks{
-	/*top: 2% !important;*/
+.container .blocks{
     width: 24% !important;
     height: 22% !important;
-    background: red !important;
 }
 .leftblocks{
 	left: 74% !important;
@@ -45,30 +52,28 @@ body{
 .rightblocks{
 	left: 2% !important;
 }
-.active{
-	top: 2%!important;
-	width: 70% !important;
-	height: 96% !important;
-	background: green !important;	
+.container .active{
+	top: 2%;
+	width: 70%;
+	height: 96%;	
 }
-.rightactive{
-	left: 28%!important;
+.container .rightactive{
+	left: 28%;
 }
-.leftactive{
-	left: 2%!important;
+.container .leftactive{
+	left: 2%;
 }
-
-.blocks.allin:nth-child(2){
-	top: 2%!important 
+.blocks.all:nth-child(2){
+	top: 2%; 
 }
-.blocks.allin:nth-child(3){
-	top: 26%!important
+.blocks.all:nth-child(3){
+	top: 26.5%;
 }
-.blocks.allin:nth-child(4){
-	top: 50%!important
+.blocks.all:nth-child(4){
+	top: 51.5%;
 }
-.blocks.allin:nth-child(5){
-	top: 74%!important
+.blocks.all:nth-child(5){
+	top: 76%;
 }
 @media screen and (min-width: 801px){
 		.container > div{
@@ -77,29 +82,29 @@ body{
 		overflow: hidden;
 		position: absolute;
 	}
-	.container .first-ln{
-	 width: 47%;
+	 .first-ln:not(.active){
+	 	width: 47%;
 	}
-	.container .one-bl{
+	 .one-bl:not(.active){
 		left: 2%;
 	}
-	.container .first-ln{
+	 .first-ln:not(.active){
 		top: 2%;
 	}
-	.container .two-bl{
-		left: 51%;
+	 .two-bl:not(.active){
+ 	 	left: 51%;
 	}
-	.container .sec-ln{
+	 .sec-ln:not(.active){
 		width: calc(92%/3);
 		top: 51%;
 	}
-	.container .thre-bl{
+	 .thre-bl:not(.active){
 		left: 2%;
 	}
-	.container .four-bl{
+	 .four-bl:not(.active){
 		left: calc(92%/3 + 4%);
 	}
-	.container .five-bl{
+	 .five-bl:not(.active){
 		left: calc(92%/3*2 + 6%);
 	}
 }
