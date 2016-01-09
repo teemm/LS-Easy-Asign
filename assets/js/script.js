@@ -1,5 +1,5 @@
 	
-	$('.container > div.basic').on('click', function (){
+	$('.container > div.basic').on('click', function(){
  	scope = $(this);
  	if(!scope.hasClass("basic"))return '';
  	slide=scope.data("slide");
@@ -19,11 +19,12 @@
 	$(".active").addClass("all "+fixactive+"blocks blocks").removeClass(fixactive+"active active");
 	scope=$(this);
 	scope.addClass(fixactive+"active active").removeClass(fixactive+"blocks blocks");
-	setTimeout(function(){scope.prependTo('.container');},50);
+	setTimeout(function(){scope.prependTo('.container');},10);
 });
 
 	$('.closse').on('click', function(){
 	$('.container > div').removeClass('active leftactive rightactive leftblocks rightblocks blocks');
-	setTimeout(function(){$('.container > div').addClass('basic all');},50);
-
+	setTimeout(function(){$('.container > div').addClass('basic all');},10);
+	// setTimeout(function(){$('.co-text').hide('fast');},10);
+	// setTimeout(function(){$('.content .closse').addClass('main');},10);
 });

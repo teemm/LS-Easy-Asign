@@ -7,6 +7,18 @@ body{
  	overflow-x: hidden;
  	overflow-y: hidden;
 }
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
 .container{
 	width: 100%;
     height: 100%;
@@ -17,8 +29,7 @@ body{
  	height: 100%;
  	overflow: hidden;
 }
-
-.container > div:not(.block) .main{
+.container > div .main{
 	background: url('../svg/img.svg') no-repeat center center;
   	width: 25%;
   	height: 25%;
@@ -26,15 +37,122 @@ body{
   	top: 37.5%;
   	margin: 0 auto;
 }
+.container > div.active .main,.container > div.blocks .main{
+	display: none;
+}
 .container .active .closse {
-	width: 30px;
-	height: 30px;
+	width: 20px;
+	height: 20px;
 	background: url('../svg/closse.svg') center;
 	position: absolute;
-	right: 2%;
+	right: 1.5%;
 	top: 2%;
 	cursor: pointer;
+}
+.container > div .co-text{
+	display: none;
+}    
+.container > div.active .co-text{
+ 	position: absolute;
+    width: 98%;
+    height: 92%;
+    background: transparent;
+    top: 8%;
+    overflow: auto;
+    display: block;
+}
+.container > div .co-text .lg{
+ 	border: 2px solid #327AD6;
+    border-radius: 15px;
+    padding: 15px;
+    width: 19%
+}
+.container > div .co-text .rows{
+ 	width: 70%;
+ 	height: 100%;
+ 	background: transparent;
+ 	position: relative;
+}
+.container > div .co-text .rows .header-row{
+ 	width: 45%;
+ 	height: 25%;
+ 	background: #327AD6;
+ 	border-radius: 5%;
+ 	position: absolute;
+ }
+.container > div .co-text .rows .one-row{
+ 	width: 73%;
+ 	height: 15%;
+ 	background: #327AD6;
+ 	border-radius: 5%;
+ 	position: absolute;
+ 	top: 35%;
+}
+.container > div .co-text .rows .one-right{
+	right: 0;
+}
+.container > div .co-text .rows .two-row{
+ 	width: 25%;
+ 	height: 15%;
+ 	background: #327AD6;
+ 	border-radius: 5%;
+ 	position: absolute;
+ 	top: 35%;
+ 	left: 75%;
+}
+.container > div .co-text .rows .thre-row{
+ 	width: 70%;
+ 	height: 15%;
+ 	background: #327AD6;
+ 	border-radius: 5%;
+ 	position: absolute;
+ 	top: 55%;
+ 	left: 30%;
+}
+.container > div .co-text .rows .fore-row{
+ 	width: 25%;
+ 	height: 15%;
+ 	background: #327AD6;
+ 	border-radius: 5%;
+ 	position: absolute;
+ 	top: 55%;
+}
+.container > div .co-text .rows .five-row{
+ 	width: 100%;
+ 	height: 15%;
+ 	background: #327AD6;
+ 	border-radius: 5%;
+ 	position: absolute;
+ 	top: 80%;
+}
+.container > div .co-text .lg img{
+ 	width: 100%;
+ 	height: 50%;
+}
+.container > div .co-text .left-lg{
+	margin: 0 3.7% 0 0;
+ 	float: left;
+}
+.container > div .co-text .right-lg{
+	margin: 0  0 0 3.7%;
+ 	float: right;
+}
 
+.container > div .co-text .sm-bl{
+ 	background: transparent;
+    padding: 4% 4% 0 4%;
+    overflow: hidden;
+    width: 100%;
+    height: 28%;
+}
+.container > div .co-text .sm-bl .all-blocks{
+ 	width: 50%;
+ 	height: 30%;
+ 	background: green;
+ 	left: 32%;
+}
+.container > div .co-text .sm-bl:last-child{
+	margin-bottom: 4%;
 }
 .transition{
 	-webkit-transition: all 400ms ease-in-out;
@@ -54,14 +172,7 @@ body{
 }
 .container .active{
 	top: 2%;
-	width: 70%;
 	height: 96%;	
-}
-.container .rightactive{
-	left: 28%;
-}
-.container .leftactive{
-	left: 2%;
 }
 .blocks.all:nth-child(2){
 	top: 2%; 
@@ -76,7 +187,16 @@ body{
 	top: 76%;
 }
 @media screen and (min-width: 801px){
-		.container > div{
+	.container .rightactive{
+		left: 28%;
+	}	
+	.container .leftactive{
+		left: 2%;
+	}	
+	.container .active{
+		width: 70%;
+	}	
+	.container > div{
 		float: left;
 		height: calc(100%/2 - 3%);
 		overflow: hidden;
@@ -109,6 +229,20 @@ body{
 	}
 }
 @media screen and (max-width: 800px){
+	.container .active{
+		width: 96%;
+		margin: 0 auto;
+	}
+	.container > div .co-text .lg{
+		width: 100%;
+	    height: 40%;
+	    border-radius: 0px;
+	    border: 0px;
+	}	
+	.container > div .co-text .lg img{
+		width: 50%;
+	    height: 100%;
+	}
 	.container{
 		height: 100%;
 	}		
