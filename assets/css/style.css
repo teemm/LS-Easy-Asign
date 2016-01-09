@@ -7,6 +7,18 @@ body{
  	overflow-x: hidden;
  	overflow-y: hidden;
 }
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
 .container{
 	width: 100%;
     height: 100%;
@@ -17,8 +29,41 @@ body{
  	height: 100%;
  	overflow: hidden;
 }
+    
+.container > div .co-text{
+ 	position: absolute;
+    width: 98%;
+    height: 92%;
+    background: transparent;
+    top: 8%;
+    overflow: auto;
+    display: none;
+}
+.container > div .co-text .lg{
+ 	border: 2px solid #327AD6;
+    border-radius: 15px;
+    padding: 15px;
+    width: 12%;
+    height: 10%;
+}
+.container > div .co-text .left-lg{
+	margin: 0 3.7% 0 0;
+ 	float: left;
+}
+.container > div .co-text .right-lg{
+	margin: 0  0 0 3.7%;
+ 	float: right;
+}
 
-.container > div:not(.block) .main{
+.container > div .co-text .sm-bl{
+ 	background: transparent;
+    padding: 4% 8% 0 4%;
+    overflow: hidden;
+}
+.container > div .co-text .sm-bl:last-child{
+	margin-bottom: 4%;
+}
+.container > div .main{
 	background: url('../svg/img.svg') no-repeat center center;
   	width: 25%;
   	height: 25%;
@@ -27,11 +72,11 @@ body{
   	margin: 0 auto;
 }
 .container .active .closse {
-	width: 30px;
-	height: 30px;
+	width: 20px;
+	height: 20px;
 	background: url('../svg/closse.svg') center;
 	position: absolute;
-	right: 2%;
+	right: 1.5%;
 	top: 2%;
 	cursor: pointer;
 
@@ -54,14 +99,7 @@ body{
 }
 .container .active{
 	top: 2%;
-	width: 70%;
 	height: 96%;	
-}
-.container .rightactive{
-	left: 28%;
-}
-.container .leftactive{
-	left: 2%;
 }
 .blocks.all:nth-child(2){
 	top: 2%; 
@@ -76,7 +114,16 @@ body{
 	top: 76%;
 }
 @media screen and (min-width: 801px){
-		.container > div{
+	.container .rightactive{
+		left: 28%;
+	}	
+	.container .leftactive{
+		left: 2%;
+	}	
+	.container .active{
+		width: 70%;
+	}	
+	.container > div{
 		float: left;
 		height: calc(100%/2 - 3%);
 		overflow: hidden;
@@ -109,6 +156,20 @@ body{
 	}
 }
 @media screen and (max-width: 800px){
+	.container .active{
+		width: 96%;
+		margin: 0 auto;
+	}
+	.container > div .co-text .lg{
+		width: 100%;
+	    height: 40%;
+	    border-radius: 0px;
+	    border: 0px;
+	}	
+	.container > div .co-text .lg img{
+		width: 50%;
+	    height: 100%;
+	}
 	.container{
 		height: 100%;
 	}		

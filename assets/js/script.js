@@ -1,6 +1,7 @@
 	
-	$('.container > div.basic').on('click', function (){
+	$('.container > div.basic').on('click', function(){
  	scope = $(this);
+ 	$('.content > div').removeClass("main").show('co-text');
  	if(!scope.hasClass("basic"))return '';
  	slide=scope.data("slide");
  	topp=100*parseFloat($(this).css("top"))/parseFloat($("body").css("height"));
