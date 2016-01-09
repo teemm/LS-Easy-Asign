@@ -37,7 +37,8 @@ body{
   	top: 37.5%;
   	margin: 0 auto;
 }
-.container > div.active .main,.container > div.blocks .main{
+.container > div.active .main,
+.container > div.blocks .main{
 	display: none;
 }
 .container .active .closse {
@@ -63,8 +64,8 @@ body{
 }
 .container > div .co-text .lg{
  	border: 2px solid #327AD6;
-    border-radius: 15px;
-    padding: 15px;
+    border-radius: 5%;
+    padding: 3%;
     width: 19%
 }
 .container > div .co-text .rows{
@@ -143,7 +144,7 @@ body{
     padding: 4% 4% 0 4%;
     overflow: hidden;
     width: 100%;
-    height: 28%;
+    height: 31%;
 }
 .container > div .co-text .sm-bl .all-blocks{
  	width: 50%;
