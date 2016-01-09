@@ -29,7 +29,23 @@ body{
  	height: 100%;
  	overflow: hidden;
 }
-    
+.container > div .main{
+	background: url('../svg/img.svg') no-repeat center center;
+  	width: 25%;
+  	height: 25%;
+  	position: relative;
+  	top: 37.5%;
+  	margin: 0 auto;
+}
+.container .active .closse {
+	width: 20px;
+	height: 20px;
+	background: url('../svg/closse.svg') center;
+	position: absolute;
+	right: 1.5%;
+	top: 2%;
+	cursor: pointer;
+}    
 .container > div .co-text{
  	position: absolute;
     width: 98%;
@@ -62,24 +78,6 @@ body{
 }
 .container > div .co-text .sm-bl:last-child{
 	margin-bottom: 4%;
-}
-.container > div .main{
-	background: url('../svg/img.svg') no-repeat center center;
-  	width: 25%;
-  	height: 25%;
-  	position: relative;
-  	top: 37.5%;
-  	margin: 0 auto;
-}
-.container .active .closse {
-	width: 20px;
-	height: 20px;
-	background: url('../svg/closse.svg') center;
-	position: absolute;
-	right: 1.5%;
-	top: 2%;
-	cursor: pointer;
-
 }
 .transition{
 	-webkit-transition: all 400ms ease-in-out;
