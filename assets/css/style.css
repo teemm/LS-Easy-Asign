@@ -188,6 +188,111 @@ body{
 	top: 76%;
 }
 @media screen and (min-width: 801px){
+	.container .active .closse {
+	width: 20px;
+	height: 20px;
+	background: url('../svg/closse.svg') center;
+	position: absolute;
+	right: 1.5%;
+	top: 2%;
+	cursor: pointer;
+}
+.container > div .co-text{
+	display: none;
+}    
+.container > div.active .co-text{
+ 	position: absolute;
+    width: 98%;
+    height: 92%;
+    background: transparent;
+    top: 8%;
+    overflow: auto;
+    display: block;
+}
+.container > div .co-text .lg{
+ 	border: 2px solid #327AD6;
+    border-radius: 5%;
+    padding: 3%;
+    width: 19%
+}
+.container > div .co-text .rows{
+ 	width: 70%;
+ 	height: 100%;
+ 	background: transparent;
+ 	position: relative;
+}
+.container > div .co-text .rows .header-row{
+ 	width: 45%;
+ 	height: 25%;
+ 	background: #327AD6;
+ 	border-radius: 5%;
+ 	position: absolute;
+ }
+.container > div .co-text .rows .one-row{
+ 	width: 73%;
+ 	height: 15%;
+ 	background: #327AD6;
+ 	border-radius: 5%;
+ 	position: absolute;
+ 	top: 35%;
+}
+.container > div .co-text .rows .one-right{
+	right: 0;
+}
+.container > div .co-text .rows .two-row{
+ 	width: 25%;
+ 	height: 15%;
+ 	background: #327AD6;
+ 	border-radius: 5%;
+ 	position: absolute;
+ 	top: 35%;
+ 	left: 75%;
+}
+.container > div .co-text .rows .thre-row{
+ 	width: 70%;
+ 	height: 15%;
+ 	background: #327AD6;
+ 	border-radius: 5%;
+ 	position: absolute;
+ 	top: 55%;
+ 	left: 30%;
+}
+.container > div .co-text .rows .fore-row{
+ 	width: 25%;
+ 	height: 15%;
+ 	background: #327AD6;
+ 	border-radius: 5%;
+ 	position: absolute;
+ 	top: 55%;
+}
+.container > div .co-text .rows .five-row{
+ 	width: 100%;
+ 	height: 15%;
+ 	background: #327AD6;
+ 	border-radius: 5%;
+ 	position: absolute;
+ 	top: 80%;
+}
+.container > div .co-text .lg img{
+ 	width: 100%;
+ 	height: 50%;
+}
+.container > div .co-text .left-lg{
+	margin: 0 3.7% 0 0;
+ 	float: left;
+}
+.container > div .co-text .right-lg{
+	margin: 0  0 0 3.7%;
+ 	float: right;
+}
+
+.container > div .co-text .sm-bl{
+ 	background: transparent;
+    padding: 4% 4% 0 4%;
+    overflow: hidden;
+    width: 100%;
+    height: 31%;
+}
 	.container .rightactive{
 		left: 28%;
 	}	
@@ -234,16 +339,6 @@ body{
 		width: 96%;
 		margin: 0 auto;
 	}
-	.container > div .co-text .lg{
-		width: 100%;
-	    height: 40%;
-	    border-radius: 0px;
-	    border: 0px;
-	}	
-	.container > div .co-text .lg img{
-		width: 50%;
-	    height: 100%;
-	}
 	.container{
 		height: 100%;
 	}		
@@ -256,3 +351,32 @@ body{
  	.container > div:last-child{
  		margin: 2% auto 0 auto;
  	}
+ 	.container > div .co-text .lg{
+ 		width: 100%;
+ 		height: 50%;
+ 		border: 0px;
+ 	}
+ 	.container > div .co-text .sm-bl {
+    	height: 50%;
+    	width: 100%;
+    }
+    .container > div:last-child{
+ 		margin: 2% auto 0 auto;
+ 	}
+ 	.container > div .co-text .sm-bl {
+    	height: 50%;
+	}
+	.container > div .co-text .lg{
+		text-align: center;
+	}
+	.container > div .co-text .rows{
+		height: 50%;
+		width: 100%;
+	}
+	.container > div .co-text .lg img{
+ 	height: 92%;
+	}
+	.container > div .co-text .rows .header-row{
+		left: 27%;
+	}
+}
