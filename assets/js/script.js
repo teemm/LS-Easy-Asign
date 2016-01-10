@@ -25,6 +25,4 @@
 	$('.closse').on('click', function(){
 	$('.container > div').removeClass('active leftactive rightactive leftblocks rightblocks blocks');
 	setTimeout(function(){$('.container > div').addClass('basic all');},10);
-	// setTimeout(function(){$('.co-text').hide('fast');},10);
-	// setTimeout(function(){$('.content .closse').addClass('main');},10);
 });
